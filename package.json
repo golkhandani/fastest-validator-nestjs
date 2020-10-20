@@ -1,8 +1,8 @@
 {
-  "name": "discord-nestjs",
-  "version": "0.2.8",
-  "description": "NestJS package for discord.js",
-  "author": "fjodor-rybakov",
+  "name": "fastest-validator-nestjs",
+  "version": "0.3.1",
+  "description": "NestJS package for fastest-validator",
+  "author": "golkhandani",
   "license": "MIT",
   "readmeFilename": "README.md",
   "publishConfig": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/fjodor-rybakov/discord-nestjs"
+    "url": "https://github.com/golkhandani/fastest-validator-nestjs"
   },
   "main": "dist/index.js",
   "typings": "./dist/index.d.ts",
@@ -20,9 +20,10 @@
   ],
   "keywords": [
     "nestjs",
-    "discord",
     "decorator",
-    "bot",
+    "validator",
+    "fastest-validator",
+    "class-validator",
     "nest",
     "typescript"
   ],
@@ -41,6 +42,12 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
+  "peerDependencies": {
+    "@nestjs/common": "^7.4.4",
+    "@nestjs/core": "^7.4.4",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.6.3"
+  },
   "devDependencies": {
     "@nestjs/cli": "^7.5.1",
     "@nestjs/common": "^7.4.4",
@@ -52,7 +59,6 @@
     "@types/supertest": "^2.0.10",
     "@typescript-eslint/eslint-plugin": "4.4.1",
     "@typescript-eslint/parser": "4.4.1",
-    "discord.js": "^12.3.1",
     "eslint": "7.11.0",
     "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-import": "^2.22.1",
@@ -69,13 +75,6 @@
     "ts-node": "^9.0.0",
     "tsconfig-paths": "^3.9.0",
     "typescript": "^4.0.3"
-  },
-  "peerDependencies": {
-    "@nestjs/common": "^7.4.4",
-    "@nestjs/core": "^7.4.4",
-    "discord.js": "^12.3.1",
-    "reflect-metadata": "^0.1.13",
-    "rxjs": "^6.6.3"
   },
   "husky": {
     "hooks": {
@@ -100,5 +99,8 @@
     },
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
+  },
+  "dependencies": {
+    "fastest-validator": "^1.8.0"
   }
 }
